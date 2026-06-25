@@ -1,0 +1,91 @@
+       565 @0000 z ex			di
+       569 @0001 z ex			jp	$0092
+       579 @0092 z ex			ld	sp,$0000
+       589 @0095 z ex			xor	a
+       593 @0096 z ex			out0	($36),a
+       +11 @0096 z ot _36 00 RCR
+       606 @0099 z ex			out0	($34),a
+       +11 @0099 z ot _34 00 ITC
+       619 @009c z ex			ld	a,$10
+       626 @009e z ex			out0	($32),a
+       +11 @009e z ot _32 10 DCNTL
+       639 @00a1 z ex			ld	a,$80
+       646 @00a3 z ex			out0	($33),a
+       +11 @00a3 z ot _33 80 IL
+       659 @00a6 z ex			ld	a,$00
+       666 @00a8 z ex			ld	i,a
+       675 @00aa z ex			ld	a,$04
+       682 @00ac z ex			out0	($00),a
+       +11 @00ac z ot _00 04 CNTLA0
+       695 @00af z ex			ld	a,$07
+       702 @00b1 z ex			out0	($02),a
+       +11 @00b1 z ot _02 07 CNTLB0
+       715 @00b4 z ex			ld	a,$02
+       722 @00b6 z ex			out0	($01),a
+       +11 @00b6 z ot _01 02 CNTLAl
+       735 @00b9 z ex			ld	a,$07
+       742 @00bb z ex			out0	($03),a
+       +11 @00bb z ot _03 07 CNTLBl
+       755 @00be z ex			ld	a,$00
+       762 @00c0 z ex			out0	($04),a
+       +11 @00c0 z ot _04 00 STAT0
+       775 @00c3 z ex			ld	a,$0c
+       782 @00c5 z ex			out0	($05),a
+       +11 @00c5 z ot _05 0c STAT1
+       795 @00c8 z ex			ld	a,$90
+       802 @00ca z ex			out0	($0e),a
+       +11 @00ca z ot _0e 90 RLDR0L
+       815 @00cd z ex			ld	a,$01
+       822 @00cf z ex			out0	($0f),a
+       +11 @00cf z ot _0f 01 RLDR0H
+       835 @00d2 z ex			ld	a,$90
+       842 @00d4 z ex			out0	($14),a
+       +11 @00d4 z ot _14 90 TMDR1L
+       855 @00d7 z ex			ld	a,$01
+       862 @00d9 z ex			out0	($15),a
+       +11 @00d9 z ot _15 01 TMDR1H
+       875 @00dc z ex			ld	a,$11
+       882 @00de z ex			out0	($10),a
+       +11 @00de z ot _10 11 TCR
+       895 @00e1 z ex			ld	a,$80
+       902 @00e3 z ex			out	($a3),a
+        +7 @00e3 z ot _a3 80
+       913 @00e5 z ex			ld	a,$99
+       920 @00e7 z ex			out	($c3),a
+        +7 @00e7 z ot _c3 99 HDC: CONTROL c3 WRITE:99
+       931 @00e9 z ex			ld	a,$00
+       938 @00eb z ex			out	($c2),a
+        +7 @00eb z ot _c2 00 HDC: CONTROL c2 WRITE:00
+       949 @00ed z ex			out	($a1),a
+        +7 @00ed z ot _a1 00
+       960 @00ef z ex			out	($a0),a
+        +7 @00ef z ot _a0 00
+       971 @00f1 z ex			out	($a2),a
+        +7 @00f1 z ot _a2 00
+       982 @00f3 z ex			out	($c0),a
+        +7 @00f3 z ot _c0 00 HDC: CONTROL c0 WRITE:00
+       993 @00f5 z ex			ld	a,$04
+      1000 @00f7 z ex			out	($c1),a
+        +7 @00f7 z ot _c1 04 HDC: CONTRL:| - |---| - |---|---|WEN|---|---|
+      1011 @00f9 z ex			call	$0435	    ;{
+       +11 @00f9 z wr _ffff 00 !!
+       +14 @00f9 z wr _fffe fc !!
+      1028 @0435 z ex			ld	a,$00
+      1035 @0437 z ex			call	$0419	    ;.{
+       +11 @0437 z wr _fffd 04 !!
+       +14 @0437 z wr _fffc 3a !!
+      1052 @0419 z ex			push	af	    ;..{
+        +5 @0419 z wr _fffb 00 !!
+        +8 @0419 z wr _fffa 44 !!
+      1063 @041a z ex			in	a,($81)
+        +7 @041a z in _81 00 X++, Y++, (2,1)
+      1074 @041c z ex			rlca
+      1078 @041d z ex			jr	c,$041a
+      1085 @041f z ex			pop	af	    ;..}
+        +4 @041f z rd _fffa 00 !!
+        +7 @041f z rd _fffb 00 !!
+      1095 @0420 z ex			out	($81),a
+        +7 @0420 z ot _81 00
+      1106 @0422 z ex			ret		    ;.}
+        +4 @0422 z rd _fffc 00 !!
+        +7 @0422 z rd _fffd 00 !!
