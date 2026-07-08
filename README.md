@@ -8,7 +8,7 @@ First change was enable RAM starting at 8000H using a debug directive.
 The disassembly has only started and is not complete.\
 Parts cleaned are:
 - Text Message area (texts are in Dutch)
-- Character font area
+- LCD character font area
 
   
 The .txt file is the first part of the trace.
