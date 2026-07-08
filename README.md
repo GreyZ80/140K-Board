@@ -11,3 +11,4 @@ Parts cleaned are:
 - Character font area
 
   
+The .txt file is the first part of the trace.
