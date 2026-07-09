@@ -1,0 +1,34 @@
+Notes on 140K
+
+RANK XEROX 8M6 manufactured by FUJI XEROX
+82/499/EEC
+
+Board name: 140K70271 TPB-S.V0
+Date codes on ICs suggest 1994
+
+Processors and memory:
+U1 CPU HD64180RP8
+U2 mem EPROM 27C256 EPROM (label: 573P III02 DUT)  Dutch?
+U3 mem SRAM  HM62256LFP
+
+U7 LCD Controller HD61830B00
+U8 mem SRAM HM6264ALP-15
+
+U26 CPU MC68HC11A1FU
+U27 mem EPROM 27C64 (label: 8031)
+
+SANAC ICM010-0400 113K90900 sn 4020623 by SANKYO SEIKI MFG CO LTD
+Memory card reader
+
+Connectors:
+P1  5V power supply
+P2  --
+P3  2 pins to beeper
+P4  2 pins to memory card reader load button
+P5  4 pins to interface(serial?)
+P6  3 pins to contrast LCD
+P7  26 pins to 8 LED array
+P8  10 pins to LCD screen
+P9  14 pins to memory card reader
+P10 --
+P11 40 pins to digitizer, incl. pen
