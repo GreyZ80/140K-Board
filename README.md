@@ -12,3 +12,5 @@ Parts cleaned are:
 
   
 The .txt file is the first part of the trace.
+
+No work has been done on the 68HC11 processor (except for a dump of the EPROM).
