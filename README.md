@@ -1,4 +1,11 @@
-# Status Feb. 2026
+# Exploration for Xerox 140K70271 control PCB
+
+RANK XEROX 8M6 manufactured by FUJI XEROX\
+82/499/EEC
+
+Board name: 140K70271 TPB-S.V0
+
+## Status Feb. 2026
 
 I copied the EPROM content to a .bin file. This file was run through a Z180 disassembler.\
 In order to do some tracing I used a TRS-80 Model II emulator (https://48k.ca/trs80gp.html).\
