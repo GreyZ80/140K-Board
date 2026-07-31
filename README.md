@@ -5,6 +5,9 @@ RANK XEROX 8M6 manufactured by FUJI XEROX\
 
 Board name: 140K70271 TPB-S.V0
 
+<img width="1000" alt="Board topview" src="https://github.com/user-attachments/assets/2d3c9ad9-d57c-4bf6-bfac-502e86ff09b9" />
+
+
 ## Status Feb. 2026
 
 I copied the EPROM content to a .bin file. This file was run through a Z180 disassembler.\
